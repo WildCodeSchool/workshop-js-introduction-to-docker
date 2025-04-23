@@ -1,0 +1,17 @@
+{
+  "name": "vintage-frontend-demo",
+  "version": "1.0.0",
+  "description": "Mini app frontend vintage avec Gulp, Sass et HMR",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-sass": "2.3.2",
+    "browser-sync": "2.18.13"
+  },
+  "dependencies": {
+    "node-sass": "4.5.3"
+  }
+}

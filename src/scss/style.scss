@@ -1,0 +1,26 @@
+$primary-color: #1478ba;
+
+body {
+  background: #f5f5f5;
+  font-family: sans-serif;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+button {
+  padding: 10px 20px;
+  background: $primary-color;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
