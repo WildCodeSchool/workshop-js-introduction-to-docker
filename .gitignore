@@ -6,3 +6,6 @@ node_modules
 src/css
 dist
 npm-debug.log*
+
+docs/_site
+docs/Gemfile.lock

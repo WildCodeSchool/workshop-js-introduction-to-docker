@@ -9,7 +9,7 @@ The demo uses **Gulp.js** to automate tasks such as compiling SCSS to CSS, servi
 
 The demo is built with the following technologies:
 - Node.js (version 7 or lower)
-- Gulp.js
+- Gulp
 - BrowserSync
 - node-sass
 
@@ -20,7 +20,7 @@ The demo is built with the following technologies:
 4. Open your browser and go to `http://localhost:3000` to see the demo
 
 ## Usage
-- Make changes to the SCSS files in the `scss` folder and save them. The Gulp server will automatically compile the SCSS.
+- Make changes to the SCSS files in the `scss` folder and save them. The Gulp server will automatically compile the SCSS to CSS.
 - Make changes to the HTML or JS files in the `src` folder and save them. 
 
 Each time you save a file, the Gulp server will automatically reload the browser to reflect the changes.
