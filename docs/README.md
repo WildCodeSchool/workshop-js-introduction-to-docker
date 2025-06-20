@@ -115,6 +115,27 @@ D’après le fichier `docker-compose.yml`, cela signifie :
 - exposer l’API sur [http://localhost:3310](http://localhost:3310) et l’interface React sur [http://localhost:3000](http://localhost:3000),
 - relier automatiquement les ports et fichiers grâce aux volumes et aux variables d’environnement.
 
+> ⚠️
+Selon les OS ou les configurations des machines, il arrive que Docker retourne une erreur lors du montage de l'image MySQL indiquant le port `3306` est déjà utilisé.  
+Si c'est le cas, deux possibilités s'offrent à toi :
+- éteindre le service MySQL sur ta machine pour libérer le port 3306 ;
+- ou changer le port `3306` en `3307` par exemple dans le fichier `docker-compose.yml` comme ceci :  
+  ```yaml
+    web:
+      environment:
+        APP_PORT: 3310
+        APP_SECRET: 123456789
+        DB_HOST: database
+        DB_PORT: 3307
+          //..
+    database:
+      ports:
+        - target: 3306
+          published: 3307
+  ```
+
+
+
 Tu peux maintenant te rendre sur [http://localhost:3000](http://localhost:3000) et constater que l'application fonctionne parfaitement 🎉.
 
 Rendez-vous dans 10 ans pour voir si ça fonctionne toujours ! 😜
